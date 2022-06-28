@@ -17,3 +17,9 @@ class UserSerializer(serializers.ModelSerializer):  # create class to serializer
     class Meta:
         model = User
         fields = ('id', 'username', 'movies')
+
+class MovieNewSerializer(serializers.ModelSerializer):  # create class to serializer model
+
+    class Meta:
+        model = Movie
+        fields = ("__all__")
